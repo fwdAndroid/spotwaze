@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:social_login_buttons/social_login_buttons.dart';
+import 'package:spotwaze/auth/login_screen.dart';
 
 class MainLoginScreen extends StatefulWidget {
   const MainLoginScreen({super.key});
@@ -34,7 +35,10 @@ class _MainLoginScreenState extends State<MainLoginScreen> {
           ),
           Text("OR"),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (builder) => LoginScreen()));
+            },
             child: Text("Sign in with Email"),
             style: ElevatedButton.styleFrom(
                 shape: StadiumBorder(), fixedSize: Size(337, 60)),
