@@ -100,8 +100,8 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Center(
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (builder) => LoginScreen()));
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (builder) => LoginScreen()));
                 },
                 child: Text("Sign in"),
                 style: ElevatedButton.styleFrom(
