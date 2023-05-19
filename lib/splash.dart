@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:spotwaze/board/welcome.dart';
+import 'package:spotwaze/introscreens/welcome.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -12,10 +12,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // Timer(
-    //     Duration(seconds: 3),
-    //     () => Navigator.pushReplacement(
-    //         context, MaterialPageRoute(builder: (context) => Welcome())));
+    Timer(
+        Duration(seconds: 3),
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => Welcome())));
   }
 
   @override
