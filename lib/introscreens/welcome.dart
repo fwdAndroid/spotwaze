@@ -1,6 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:spotwaze/auth/login_screen.dart';
+import 'package:spotwaze/auth/main_login_screen.dart';
 import 'package:spotwaze/introscreens/onboard.dart';
 
 class Welcome extends StatefulWidget {
