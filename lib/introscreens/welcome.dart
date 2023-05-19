@@ -1,5 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:spotwaze/auth/login_screen.dart';
 import 'package:spotwaze/introscreens/onboard.dart';
 
 class Welcome extends StatefulWidget {
@@ -34,7 +35,12 @@ class _WelcomeState extends State<Welcome> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => MainLoginScreen()));
+                    },
                     child: Text(
                       "Skip",
                       style:
@@ -42,7 +48,12 @@ class _WelcomeState extends State<Welcome> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => MainLoginScreen()));
+                    },
                     child: Text(
                       "Next",
                       style: TextStyle(color: Color(0xff613EEA)),
