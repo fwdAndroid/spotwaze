@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:social_login_buttons/social_login_buttons.dart';
 import 'package:spotwaze/auth/register_screen.dart';
 
