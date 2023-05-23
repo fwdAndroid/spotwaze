@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:social_login_buttons/social_login_buttons.dart';
 import 'package:spotwaze/auth/register_screen.dart';
+import 'package:spotwaze/main_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -99,8 +100,8 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (builder) => LoginScreen()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (builder) => MainScreen()));
                 },
                 child: Text("Sign in"),
                 style: ElevatedButton.styleFrom(
