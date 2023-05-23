@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotwaze/booking/confrim_booking_screen.dart';
 import 'package:spotwaze/widgetts/drawer.dart';
 
 class PayForBooking extends StatefulWidget {
@@ -46,7 +47,6 @@ class _PayForBookingState extends State<PayForBooking> {
                 ),
               ),
               Spacer(),
-              Image.asset("assets/s.png", height: 100),
               Container(
                 margin: EdgeInsets.only(left: 20, right: 20, top: 10),
                 child: Card(
@@ -54,6 +54,18 @@ class _PayForBookingState extends State<PayForBooking> {
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
+                        Image.asset(
+                          "assets/emojione-party-popper.png",
+                          height: 50,
+                        ),
+                        Text(
+                          "Awesome! You’re done parking",
+                          style: TextStyle(
+                              color: Color(0xff3B414B),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600),
+                        ),
+                        SizedBox(height: 10),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -76,6 +88,21 @@ class _PayForBookingState extends State<PayForBooking> {
                         ),
                         Divider(),
                         Row(
+                          children: [
+                            Text(
+                              "Parking Session",
+                              style: TextStyle(
+                                  color: Color(0xff3B414B),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600),
+                              textAlign: TextAlign.start,
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Text(
@@ -86,7 +113,7 @@ class _PayForBookingState extends State<PayForBooking> {
                                   fontWeight: FontWeight.w400),
                             ),
                             Text(
-                              "2:AM",
+                              "11:AM",
                               style: TextStyle(
                                   color: Color(0xff3B414B),
                                   fontSize: 16,
@@ -101,14 +128,14 @@ class _PayForBookingState extends State<PayForBooking> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Text(
-                              "Estimated Duration:",
+                              "Check-out Time:",
                               style: TextStyle(
                                   color: Color(0xff3B414B),
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400),
                             ),
                             Text(
-                              "3 Hrs ",
+                              "11:AM",
                               style: TextStyle(
                                   color: Color(0xff3B414B),
                                   fontSize: 16,
@@ -116,6 +143,7 @@ class _PayForBookingState extends State<PayForBooking> {
                             ),
                           ],
                         ),
+                        Divider(),
                         SizedBox(
                           height: 10,
                         ),
@@ -123,46 +151,42 @@ class _PayForBookingState extends State<PayForBooking> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Text(
-                              "Unique ID",
+                              "Total:",
                               style: TextStyle(
                                   color: Color(0xff3B414B),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400),
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w600),
                             ),
                             Text(
-                              "1345",
+                              "N1200",
                               style: TextStyle(
                                   color: Color(0xff3B414B),
-                                  fontSize: 16,
+                                  fontSize: 24,
                                   fontWeight: FontWeight.w600),
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                shape: StadiumBorder(),
-                                backgroundColor: Color(0xff613EEA),
-                                fixedSize: Size(320, 40)),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (builder) => PayForBooking()));
-                            },
-                            child: Text(
-                              "View Booking Details",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ))
                       ],
                     ),
                   ),
                 ),
               ),
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      shape: StadiumBorder(),
+                      backgroundColor: Color(0xff613EEA),
+                      fixedSize: Size(320, 56)),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (builder) => ConfrimBookingScreen()));
+                  },
+                  child: Text(
+                    "Pay",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  )),
               Spacer(),
             ],
           ),
