@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:spotwaze/booking/pay_for_booking.dart';
 import 'package:spotwaze/widgetts/drawer.dart';
 
-class BookingDetails extends StatefulWidget {
-  const BookingDetails({super.key});
+class PayForBooking extends StatefulWidget {
+  const PayForBooking({super.key});
 
   @override
-  State<BookingDetails> createState() => _BookingDetailsState();
+  State<PayForBooking> createState() => _PayForBookingState();
 }
 
-class _BookingDetailsState extends State<BookingDetails> {
+class _PayForBookingState extends State<PayForBooking> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
