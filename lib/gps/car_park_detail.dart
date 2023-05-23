@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:spotwaze/gps/car_park_detail.dart';
 import 'package:spotwaze/widgetts/drawer.dart';
 
-class ParkingLocationScreen extends StatefulWidget {
-  const ParkingLocationScreen({super.key});
+class CarParkDetail extends StatefulWidget {
+  const CarParkDetail({super.key});
 
   @override
-  State<ParkingLocationScreen> createState() => _ParkingLocationScreenState();
+  State<CarParkDetail> createState() => _CarParkDetailState();
 }
 
-class _ParkingLocationScreenState extends State<ParkingLocationScreen> {
+class _CarParkDetailState extends State<CarParkDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,38 +42,6 @@ class _ParkingLocationScreenState extends State<ParkingLocationScreen> {
                       prefixIcon: Icon(Icons.pin_drop),
                       filled: true,
                       hintText: "Eden Garden"),
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (builder) => CarParkDetail()));
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Image.asset(
-                      "assets/mmm.png",
-                      height: 100,
-                    ),
-                    Image.asset(
-                      "assets/mmm.png",
-                      height: 100,
-                    ),
-                  ],
-                ),
-              ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (builder) => CarParkDetail()));
-                },
-                child: Image.asset(
-                  "assets/mmm.png",
-                  height: 100,
                 ),
               ),
             ],
