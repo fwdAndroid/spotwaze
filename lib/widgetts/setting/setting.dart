@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotwaze/widgetts/drawer.dart';
+import 'package:spotwaze/widgetts/setting/notification.dart';
 
 class AppSetting extends StatefulWidget {
   const AppSetting({super.key});
@@ -29,23 +30,29 @@ class _AppSettingState extends State<AppSetting> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(
-                          "assets/notifications.png",
-                          height: 100,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (builder) => Noti()));
+                },
+                child: Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Image.asset(
+                            "assets/notifications.png",
+                            height: 100,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text("Notificaitons")
-                    ],
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text("Notificaitons")
+                      ],
+                    ),
                   ),
                 ),
               ),

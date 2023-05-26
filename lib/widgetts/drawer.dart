@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotwaze/widgetts/setting/notification.dart';
 import 'package:spotwaze/widgetts/setting/setting.dart';
 
 class MyDrawer extends StatefulWidget {
@@ -47,6 +48,10 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
           Divider(),
           ListTile(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (builder) => Noti()));
+            },
             title: Text("Notifications"),
             leading: Icon(Icons.notifications),
           ),
