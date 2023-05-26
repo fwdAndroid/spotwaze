@@ -13,6 +13,12 @@ class ParkingRecords extends StatelessWidget {
         child: Scaffold(
           drawer: MyDrawer(),
           appBar: AppBar(
+            actions: [
+              Icon(
+                Icons.search,
+                color: Colors.black,
+              )
+            ],
             iconTheme: IconThemeData(color: Colors.black),
             backgroundColor: Colors.white,
             centerTitle: true,
