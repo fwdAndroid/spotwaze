@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:spotwaze/main_screen.dart';
+import 'package:spotwaze/parking_records/parking_records.dart';
 import 'package:spotwaze/widgetts/setting/notification.dart';
 import 'package:spotwaze/widgetts/setting/setting.dart';
 
@@ -33,6 +35,10 @@ class _MyDrawerState extends State<MyDrawer> {
             height: 20,
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (builder) => MainScreen()));
+            },
             title: Text("Home"),
             leading: Icon(Icons.home),
           ),
@@ -43,6 +49,10 @@ class _MyDrawerState extends State<MyDrawer> {
           ),
           Divider(),
           ListTile(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (builder) => ParkingRecords()));
+            },
             title: Text("Parking History"),
             leading: Icon(Icons.history),
           ),
