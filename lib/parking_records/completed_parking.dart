@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotwaze/ticket/view_ticket.dart';
 
 class CompletedParking extends StatefulWidget {
   const CompletedParking({super.key});
@@ -42,7 +43,12 @@ class _CompletedParkingState extends State<CompletedParking> {
                             shape: StadiumBorder(),
                             backgroundColor: Color(0xff613EEA),
                             fixedSize: Size(260, 55)),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (builder) => ViewTicket()));
+                        },
                         child: Text(
                           "View Ticket",
                           style: TextStyle(color: Colors.white),
